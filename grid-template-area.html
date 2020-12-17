@@ -1,0 +1,53 @@
+<html>
+<head>
+    <style>
+        @font-face {
+            font-family: 'Cafe24Oneprettynight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            font-family: 'Cafe24Oneprettynight';
+            font-size: 16px;
+        }
+
+        .container {
+            padding: 10px;
+            display: grid;
+            grid-template-areas: "header header" "nav section" "footer footer";
+            grid-template-rows: 100px 400px 100px;
+            grid-template-columns: 80px auto;
+        }
+
+        .container > * {
+            padding: 10px;
+        }
+        header {
+            grid-area: header;
+            background:lightsteelblue;
+        }
+        nav {
+            grid-area: nav;
+            background:lightgoldenrodyellow;
+        }
+        section {
+            grid-area : section;
+            background:lightcyan;
+        }
+        footer {
+            grid-area: footer;
+            background:lightblue;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>header</header>
+    <nav>Navigation</nav>
+    <section>Main Section</section>
+    <footer>Footer</footer>
+</div>
+</body>
+</html>
