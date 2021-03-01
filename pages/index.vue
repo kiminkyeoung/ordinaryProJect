@@ -10,7 +10,6 @@ export default {
     }
   },
   beforeCreate() {
-    //this.$router.push({ path: 'login' })
   }
 }
 </script>

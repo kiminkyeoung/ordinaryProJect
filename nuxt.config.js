@@ -1,6 +1,7 @@
 var session = require('express-session');
 
 module.exports = {
+  telemetry: false,
   mode: 'universal',
   /*
   ** Headers of the page
@@ -15,9 +16,6 @@ module.exports = {
     script: [
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
   },
   /*
   ** Customize the progress-bar color
@@ -29,7 +27,6 @@ module.exports = {
   css: [
     '~assets/css/font-awesome.min.css',
     '~assets/css/fonts.css',
-    '~assets/css/Lite.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -57,4 +54,4 @@ module.exports = {
   serverMiddleware: [
     { path: '/api', handler: '~/api/index.js' }
   ],
-}
+};

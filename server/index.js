@@ -1,29 +1,29 @@
-const express = require('express')
-const consola = require('consola')
-const { Nuxt, Builder } = require('nuxt')
-const app = express()
+const express = require('express');
+const consola = require('consola');
+const { Nuxt, Builder } = require('nuxt');
+const app = express();
 const passport = require('passport');
 const bodyParser = require('body-parser');
 const flash = require('connect-flash');
 const session = require('express-session');
 // Import and Set Nuxt.js options
-const config = require('../nuxt.config.js')
-config.dev = !(process.env.NODE_ENV === 'production')
+const config = require('../nuxt.config.js');
+config.dev = !(process.env.NODE_ENV === 'production');
 
 var MySQLStore = require('express-mysql-session')(session);
-var dbConfig = require('../config/dbConfig.js');
+//var dbConfig = require('../config/dbConfig.js');
 
 const path = require('path');
 
 async function start() {
   // Init Nuxt.js
-  const nuxt = new Nuxt(config)
+  const nuxt = new Nuxt(config);
 
-  const { host, port } = nuxt.options.server
+  const { host, port } = nuxt.options.server;
   const port_2 = 3001;
   // Build only in dev mode
   if (config.dev) {
-    const builder = new Builder(nuxt)
+    const builder = new Builder(nuxt);
     await builder.build()
   } else {
     await nuxt.ready()
@@ -33,17 +33,6 @@ async function start() {
 
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended : true}));
-
-  app.use(session({
-    secret: 'afsdfiuhaiufheui123uh1i2hiuhqwd',
-    resave: false,
-    saveUninitialized: false,
-    cookie: { 
-      domain : '.vetec-bom.com',
-      maxAge: 2000 * 60 * 60 
-    },
-    store : new MySQLStore(dbConfig)
-  }));
 
   app.use(passport.initialize());
   app.use(passport.session());
@@ -55,10 +44,10 @@ async function start() {
   });
 
   // Give nuxt middleware to express
-  app.use(nuxt.render)
+  app.use(nuxt.render);
 
   // Listen the server
-  app.listen(port_2, host)
+  app.listen(port_2, host);
   consola.ready({
     message: `Server listening on http://${host}:${port_2}`,
     badge: true
