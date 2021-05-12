@@ -1,4 +1,8 @@
 import Vue from 'vue'
+/*import printJS from 'print-js'
+Vue.use(printJS);*/
+
+
 import datePicker from 'vue-bootstrap-datetimepicker';
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css';
 
