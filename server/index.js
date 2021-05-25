@@ -20,7 +20,7 @@ async function start() {
   const nuxt = new Nuxt(config);
 
   const { host, port } = nuxt.options.server;
-  const port_2 = 3000;
+  const port_2 = 3001;
   // Build only in dev mode
   if (config.dev) {
     const builder = new Builder(nuxt);
@@ -53,4 +53,4 @@ async function start() {
     badge: true
   })
 }
-start()
+start();
