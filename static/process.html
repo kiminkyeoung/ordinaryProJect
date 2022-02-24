@@ -1,0 +1,27 @@
+<html>
+<head>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+        #progress {
+            appearance: none;
+        }
+        #progress::-webkit-progress-bar {
+            background:#f0f0f0;
+            border-radius:10px;
+            box-shadow: inset 3px 3px 10px #ccc;
+        }
+        #progress::-webkit-progress-value {
+            border-radius:10px;
+            background: #1D976C;
+            background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);
+            background: linear-gradient(to right, #93F9B9, #1D976C);
+
+        }
+
+    </style>
+</head>
+<body>
+    <h2>진행상항</h2>
+    <progress id="progress" value="50" min="0" max="100"></progress>
+</body>
+</html>

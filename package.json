@@ -48,6 +48,7 @@
     "vue-template-compiler": "^2.6.10",
     "vue2-timepicker": "^0.1.4",
     "vuebar": "0.0.20",
+    "vuejs-paginate": "^2.1.0",
     "vuelendar": "^1.0.15",
     "vuex": "^3.6.0",
     "whatwg-fetch": "^2.0.4"
